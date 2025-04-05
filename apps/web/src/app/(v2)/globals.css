@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@config "../../../tailwind.v1.2.0.config.ts";

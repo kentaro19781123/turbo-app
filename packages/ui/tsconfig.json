@@ -1,0 +1,19 @@
+{
+  "extends": "@repo/typescript-config/typescript-config.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts",
+    "eslint.config.mjs"
+  ],
+
+  "exclude": ["dist", "build", "node_modules"]
+}

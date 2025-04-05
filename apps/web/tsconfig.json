@@ -1,0 +1,26 @@
+{
+  "extends": "@repo/typescript-config/typescript-config.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "baseUrl": ".",
+        "paths": {
+          "@ui/*": ["../../packages/ui/src/*"],
+          "@ui2/*": ["../../packages/ui2/src/*"]
+        }
+      },
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts",
+    "eslint.config.mjs"
+  ],
+  "exclude": ["node_modules"]
+}
