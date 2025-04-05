@@ -26,6 +26,7 @@ const eslintConfig = [
     },
   },
   {
+    files: ['src/app/(v1)/**/*.{ts,tsx}'],
     plugins: {
       tailwindcss: tailwind,
     },
@@ -39,17 +40,23 @@ const eslintConfig = [
       },
     },
   },
-  {
-    files: ['src/app/(v1)/**/*.{ts,tsx}'],
-    settings: {
-      tailwindcss: {
-        config: path.resolve(__dirname, './tailwind.v1.1.0.config.ts'),
-        groupByResponsive: true,
-      },
-    },
-  },
+  // {
+  //   files: ['src/app/(v1)/**/*.{ts,tsx}'],
+  //   settings: {
+  //     tailwindcss: {
+  //       config: path.resolve(__dirname, './tailwind.v1.1.0.config.ts'),
+  //       groupByResponsive: true,
+  //     },
+  //   },
+  // },
   {
     files: ['src/app/(v2)/**/*.{ts,tsx}'],
+    plugins: {
+      tailwindcss: tailwind,
+    },
+    rules: {
+      ...tailwind.configs['flat/recommended'].rules,
+    },
     settings: {
       tailwindcss: {
         config: path.resolve(__dirname, './tailwind.v1.2.0.config.ts'),
@@ -60,7 +67,3 @@ const eslintConfig = [
 ]
 
 export default eslintConfig
-// import { config } from "@repo/eslint-config/react-internal";
-
-// /** @type {import("eslint").Linter.Config} */
-// export default config;
