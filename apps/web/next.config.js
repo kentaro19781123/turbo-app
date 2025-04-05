@@ -5,7 +5,4 @@ module.exports = {
   output: 'export',
   trailingSlash: true,
   transpilePackages: ['@repo/ui', '@repo/ui2'],
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 }
